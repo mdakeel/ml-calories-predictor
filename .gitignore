@@ -1,9 +1,10 @@
-# Ignore data folder (handled by DVC)
-data/
+# Ignore data folder but allow DVC metadata
+data/*
+!data/*.dvc
 
-# Ignore model files (if tracked by DVC)
-models/
-*.pkl
+# Ignore models folder but allow DVC metadata
+models/*
+!models/*.dvc
 
 # DVC cache
 .dvc/cache/
@@ -18,3 +19,4 @@ __pycache__/
 # OS-specific
 .DS_Store
 Thumbs.db
+
