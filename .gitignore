@@ -1,0 +1,20 @@
+# Ignore data folder (handled by DVC)
+data/
+
+# Ignore model files (if tracked by DVC)
+models/
+*.pkl
+
+# DVC cache
+.dvc/cache/
+
+# Python artifacts
+__pycache__/
+*.pyc
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# OS-specific
+.DS_Store
+Thumbs.db
