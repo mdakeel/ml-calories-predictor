@@ -1,22 +1,36 @@
-# Ignore data folder but allow DVC metadata
-data/*
-!data/*.dvc
+# Ignore raw and processed data files
+data/**/*.csv
+data/**/*.tsv
+data/**/*.parquet
+data/**/*.xlsx
 
-# Ignore models folder but allow DVC metadata
-models/*
-!models/*.dvc
+# But DO NOT ignore DVC metadata files
+!data/**/*.dvc
 
-# DVC cache
-.dvc/cache/
+# Ignore model binaries
+model/*.pkl
+model/*.joblib
+model/*.h5
 
-# Python artifacts
+# Ignore Python cache and logs
 __pycache__/
-*.pyc
+*.py[cod]
+*.log
 
-# Jupyter checkpoints
+# Ignore Jupyter notebook checkpoints
 .ipynb_checkpoints/
 
-# OS-specific
+# Ignore virtual environments
+venv/
+.env/
+
+# Ignore DVC cache and lock files
+.cache/
+.dvc/tmp/
+.dvc/cache/
+.dvc/config.local
+.dvc.lock
+
+# Ignore system files
 .DS_Store
 Thumbs.db
-
