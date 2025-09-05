@@ -4,6 +4,7 @@ stages:
     deps:
       - src/preprocess.py
       - data/raw/row.csv
+      - params.yaml
     outs:
       - data/X_train.csv
       - data/X_test.csv
@@ -16,6 +17,7 @@ stages:
       - src/train.py
       - data/X_train.csv
       - data/y_train.csv
+      - params.yaml
     outs:
       - model/model.pkl
 
