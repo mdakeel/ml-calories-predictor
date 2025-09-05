@@ -30,3 +30,5 @@ stages:
       - model/model.pkl
     outs:
       - metrics.json
+metrics:
+  - metrics.json
